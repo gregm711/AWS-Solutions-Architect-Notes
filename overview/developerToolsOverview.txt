@@ -1,0 +1,12 @@
+Code Commit:
+	AWS version of github
+
+Code Build:
+	Compiling code
+
+Code Deploy:
+	Deployign code to EC2
+
+Code Pipeline:
+	keeping track of different versions of code
+

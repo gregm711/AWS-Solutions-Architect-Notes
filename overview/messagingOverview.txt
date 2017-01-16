@@ -1,0 +1,8 @@
+SNS:
+	Text messaging to users
+
+SQS:
+	Simple queue service
+
+SES:
+	Simple email service

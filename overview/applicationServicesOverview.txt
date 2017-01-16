@@ -1,0 +1,15 @@
+Step Functions:
+	Vizualize what is heppenign in env
+
+SWF:
+	Simple work flow services, coordination between human and computer tasks
+
+API Gateway:
+	doorway to accessing backend data
+
+App stream:
+	Streaming desktop apps to users
+
+Elastic Transcoder:
+	Changes resolution of images/video to suit all browsers
+

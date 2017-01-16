@@ -1,0 +1,22 @@
+Cloud watch:
+	used to monitor utilization of resources
+
+Cloud Formation:
+	Turning infrastructure into code. ex you can deploy 50 server infrastructure with a few lines of code
+
+
+Cloud trail:
+	Auditing changed to AWS environment
+
+OpsWorks:
+	Automating deployments
+
+Config Manager:
+	Auditing environment that sends alerts when configs may be broken
+
+
+Trusted Advisor:
+	Makes recommedations for environment
+
+
+

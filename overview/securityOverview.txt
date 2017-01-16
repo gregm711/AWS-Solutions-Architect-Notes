@@ -1,0 +1,21 @@
+IAM:
+	Identity and access management responsible for all authentication within AWS
+
+Inspector:
+	Security reporting on VM's 
+
+
+Certificate manager:
+	SSL certs 
+
+Directory Service:
+	Connecting Active Directory (Microsoft) to AWS
+
+WAF:
+	Web applictation firewall. Stops attacks on application layer (SQL injections ect)
+
+Artifcats:
+	Compliance documents
+
+
+
