@@ -1,0 +1,100 @@
+An instance is launched into the public subnet of a VPC. Which of the following must be done in order for it to be accessible FROM the Internet?
+ a) Attach an Elastic IP to the instance
+ b) Nothing. The instance is accessible from the Internet
+ Launch a NAT instance and route all traffic to it
+
+
+
+Make an entry in the route table passing all traffic going outside the VPC to the NAT instanceAn instance is launched into the public subnet of a VPC. Which of the following must be done in order for it to be accessible FROM the Internet?
+Attach an Elastic IP to the instance
+Nothing. The instance is accessible from the Internet
+Launch a NAT instance and route all traffic to it
+Make an entry in the route table passing all traffic going outside the VPC to the NAT instance
+In VPCs with private and public subnets, database servers should ideally be launched into:
+The public subnet
+The private subnet
+Either of them
+Not recommended, they should ideally be launched outside VPC
+
+
+
+
+An instance is connected to an ENI (Elastic Network Interface) in one subnet. What happens when you attach an ENI of a different subnet to this instance?
+The instance follows the rules of the older subnet
+The instance follows the rules of both the subnets
+The instance follows the rules of the newer subnet
+Not possible cannot be connected to 2 ENIs
+You want to use Route53 to direct your www sub-domain to an elastic load balancer fronting your web servers. What kind of record set should you create?
+A.
+AAAA
+NS
+CNAME
+
+
+
+
+You have created 4 weighted resource record sets with weights 1, 2, 3 and 4. the 3rd record set is selected by Route53:
+1/7th of the  time
+3/10th of the time
+3/7th of the time
+1/4th of the time
+You have created a Route 53 latency record set from your domain to a machine in Singapore and a similar record to a machine in Oregon. When a user located in India visits your domain he will be routed to:
+Singapore
+Oregon
+Depends on the load on each machine
+Both, because 2 requests are made, 1 to each machine
+
+
+
+
+Which of the following can be used as an origin server in CloudFront?(Choose 3)
+A webserver running on EC2
+A webserver running in your own datacenter
+A RDS instance
+An Amazon S3 bucket
+
+
+
+In CloudFront what happens when content is NOT present at an Edge location and a request is made to it?
+An Error 404 not found is returned
+CloudFront delivers the content directly from the origin server and stores it in the cache of the edge location
+The request is kept on hold till content is delivered to the edge location
+The request is routed to the next closest edge location
+
+
+
+Which of the following is true with respect to serving private content through CloudFront?
+Signed URLs can be created to access objects from CloudFront edge locations
+Direct access to S3 URLs can be removed therefore allowing access only through CloudFront URLs
+Mark the S3 bucket private and allow access to CloudFront by means of Roles
+Mark the S3 bucket private and and create an Origin Access Identity to access the objects
+
+
+You have written a CloudFormation template that creates 1 elastic load balancer fronting 2 EC2 instances. Which section of the template should you edit so that the DNS of the load balancer is returned upon creation of the stack.
+Resources
+Parameters
+Outputs
+Mappings
+
+
+
+
+1) a
+
+2) b
+
+3) b
+
+4) d
+
+5) b
+
+6) a
+
+7) a, b, d
+
+8) b
+
+9) a, b, d
+
+10) c

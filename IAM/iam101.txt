@@ -15,5 +15,12 @@ Critical Terms:
 	Roles - determine what users can and cannot access
 	Policies - A document that defines one or more permissions
 
+Summary:
+	IAM is global,
+	new users have no permissions when created
+	new users are assigned Acces key ID & Secret Access Key on creation
+	setup multifactor Authentication on root
+	custom password rotation policies
+
 
 

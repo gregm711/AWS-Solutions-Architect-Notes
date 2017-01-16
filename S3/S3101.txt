@@ -1,0 +1,44 @@
+What is s3:
+	Object based storage (video, image) flat files
+	built to withstand failure
+	from 0 - 5TB
+	files are stored in buckets
+	universal namespace, names must be unique globally
+	recieve http 200 code for success when file upload is complete
+
+Read after writes consistency for overwrite PUTS of new objects 
+Eventual consitency for overwrite PUTS and DELETES (can take some time to propagate)
+
+S3 is a simple key value store of the following info:
+	key (name of the object)
+	value (data of the objects)
+	version ID
+	metadata (data about data)
+	subresources - access control lisrs
+	Torrent
+
+Basics
+	Built for 99.99% availability
+	Amazon guarantee 99.9% availability
+	Amazon guarantee 99.99999999999% durablilty for S3 information (11 x 9s)  won't lose the file
+	tiered storeage Abaible
+	lifecycle management
+	versioning
+	encyption
+	secure using roles
+
+Storage Tiers/Classes
+	stored redundantly across multiple devices in multiple facilities and is designed to sustain loss of 2 facilites concurrently
+	S3- IA (infrequently accessed) for data that is accessed less frequently but requires rapdid access when needed, lower fee than s3 but you are charged a retrieval fee
+	RRS (reduces redundancy storage) - Designed to provide 99.99% durablilty and 99.99% avaliablilty for a given year
+	Glacier: very cheap but used for archival only, it takes 3-5 hours to restore data
+
+
+S3 - Charges:
+	Storage
+	Requests
+	Storage manaagement Pricing
+	data transfer pricing
+	Transfer accceleration
+
+Transfer acceleration is aws's process for sending s3 data to edge locations and an optimized network path to deliver data quickly over large amounts of area
