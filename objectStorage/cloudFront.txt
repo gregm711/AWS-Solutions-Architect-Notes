@@ -1,0 +1,2 @@
+what is a CDN (content delivery network):
+	A system of distriubuted servers that deliver webpages and other wb content to a suer based on the geophraphic locations of the user, th eorigin of the webpage and content delivery server

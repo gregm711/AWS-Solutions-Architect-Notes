@@ -42,3 +42,42 @@ S3 - Charges:
 	Transfer accceleration
 
 Transfer acceleration is aws's process for sending s3 data to edge locations and an optimized network path to deliver data quickly over large amounts of area
+
+versioning in s3:
+	great backup tool
+	once versioning is turned on it can never be turned off, only disabled
+	bucket will hold the memory of file and all previous versions.
+	ex: minor change to 4gb file will result in two 4gb files being stored.
+	Use lifecycle managemement system to keep memory use down
+	restore old files using old console and version tab and delete delete marker
+	to help prevent accidental deletions, use MFA (multi-factor auth) for all deletes. This is difficult and annoying to do!
+
+
+Cross region replication:
+	used to copy buckets to different regions
+	only new data will be replicated, old data (with the exception of versions) will not appear
+	versioning must be turned on
+	role is created to allow cross-bucket communication
+	multiple cross region replication is NOT supported, a->b->c
+	delete markers ARE replicated
+	deleting delete markers and individule versions are NOT replciated
+
+
+Life cycle management:
+	versioning can be turned off or on with lifecycle management
+	can be configured with whole bucket or prefix (subfolder)
+	set x (must be >= 30) days after creation of new version transfer to IA (infrequently access), and y (must be >=30) days to glacier
+	can be used with incomplete multipart uploads
+	you can permenetly delete with lifecycle management
+
+
+
+
+
+
+
+
+
+
+
+
