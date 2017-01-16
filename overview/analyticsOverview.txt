@@ -1,0 +1,21 @@
+Athena:
+	Run Sql queries on s3 
+
+Elastic Map reduce:
+	cluster computing using hadoop on large data sets
+
+Cloud Search:
+	Search with in house framework.
+
+Elastic search:
+	Search with elastic search open source framework
+
+Kinesis:
+	storing and retirevieing massive amounts of real time data ex financial markets
+
+Data Pipeline:
+	transferiign data from one service to another. ex s3 to dynamo
+
+Quick Sight:
+	Business analytics and building dashboard for usage
+

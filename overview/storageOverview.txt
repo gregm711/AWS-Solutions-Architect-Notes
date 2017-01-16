@@ -1,0 +1,12 @@
+S3:
+	object based storage in buckets
+
+Glacier:
+	archiving files off s3. used when you don't need immediate access for long term files
+
+EFS:
+	Elastic file storage, block based storage that can be shared
+
+Storage Gateway:
+	connecting up s3 to on premise servers
+

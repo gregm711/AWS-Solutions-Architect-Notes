@@ -1,0 +1,9 @@
+Snowball:
+	enterprise level application for migrating large amounts of data into s3. Snowball is a physical device.
+
+DMS:
+	migrate on premise db to cloud. ex oracle to aurora
+
+Server Migration Service (SMS):
+	migrates on premise VM's to cloud. 
+
