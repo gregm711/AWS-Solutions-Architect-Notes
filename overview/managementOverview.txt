@@ -9,7 +9,7 @@ Cloud trail:
 	Auditing changed to AWS environment
 
 OpsWorks:
-	Automating deployments
+	Automating deployments using Chef
 
 Config Manager:
 	Auditing environment that sends alerts when configs may be broken

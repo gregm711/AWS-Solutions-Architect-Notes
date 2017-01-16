@@ -1,0 +1,14 @@
+RDS:
+	relational database storage (MYSQL, Postgres)
+
+DyanmoDB:
+	non-sql, horizontally scalebale
+
+Redshift:
+	data wharehousing, creates copy of production database that can be queried without slowing down production
+
+elasticache:
+	cacheing db using redis / 
+
+
+
