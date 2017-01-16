@@ -1,2 +1,41 @@
 what is a CDN (content delivery network):
 	A system of distriubuted servers that deliver webpages and other wb content to a suer based on the geophraphic locations of the user, th eorigin of the webpage and content delivery server
+
+
+key terms:
+	Edge Locaiton - this is location where content will be cached. Separate to an AWS region/AZ
+	Origin - the origin of all the files that the CDN will distribute. This can be an s3 bucket, an ec2 instance, Elastic load balancer or Route53
+	Distribution - this is the name given the CDN which consists of a collection fo edge locations
+	Web Distribution - typically used for websites
+	RTMP - used for media streaming (adobe flash ect)
+
+
+FLow of data:
+	user makes request to edge location
+	edge location looks to see if this item is cached
+	If not, it calls to origin (s3) and caches in edge location before serving the content
+
+Cloud front:
+	AWS CDN
+	optimized to work with other AWS services
+
+
+Edge location:
+	accept both read and writes
+	objects are cached for the life of the TTL (time to live)  - custom value that is set
+	you can clear cache objects, but this will be charged
+
+
+Steps for creating cloud front distribution:
+	create bucket, and add image file
+	go to cloud front, create web distribution
+	origin domain name -  choose bucket domain
+	restrict bucket access - force cloud front. ex s3 bucket path does not work for file
+	origin access identity - create bucket policy for this access
+	you can create whitelist and blacklist for locations to prevent/allow access
+	create invalidation invalidates object before its TTL expires but does cost money 
+
+
+
+
+

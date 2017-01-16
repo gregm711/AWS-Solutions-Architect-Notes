@@ -71,6 +71,23 @@ Life cycle management:
 	you can permenetly delete with lifecycle management
 
 
+Security:
+	Bucket policies
+	access control lists - control individule items
+	configure to create logs for all requests. This is stored in another bucket
+
+
+Encyrption:
+	in Transit - when data is being sent between bucket and computer
+		SSL/TLS
+	At rest
+		Server side encryption
+			S3 Managed Keys -SSE-S3
+			AWS Key management Service, Managed keys -SSE-KMS. This has a few additional benefits from SSE-S3. Envelope protection and audits
+			Server Side Encryption with customer provided keys -SSE-C
+		Client Side encyrption
+
+
 
 
 
