@@ -1,0 +1,22 @@
+
+Import/Export:
+	pre-snowball, people mailed in disks to have data transfered. because of the differences in manufactures for each disk this was a nightmare to manage
+
+Snowball:
+	Petabyte scale data transport solution that uses secure appliances to transfer large amounts of data into and out of AWS. 80TB
+
+Snowball Edge:
+	100TB data transfer with compute capabilities such as lambda. ex use case. airplanes collect data during flight then ship off to be analyzed.
+	miniture data center
+
+Snow mobile:
+	Exabyte scale data transfer service used to move extremely large amounts of data to AWS. You can transfer up to 100PB per snowmobile, a 45ft long ruggedized shipping container that is hauled by a semi truck.  6 months per exabyte
+
+
+Exam tips:
+	Understand snowball
+	Understand Import/Export
+	Snowball can:
+		import to s3
+		export from s3
+

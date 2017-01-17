@@ -9,4 +9,28 @@ Types of Storage Gateways:
 		Stored Volumes
 		Cached Volumes
 	Tape Gateway (VTL): archived tapes of data
-	
+
+File Gateway:
+	Files are stored as objects in s3 buckets, accessed through a Network file system (NFS) mount point. once data is transferred the objects can be manaaged as native s3 objects
+
+Volume Gateway:
+	Volume interface presents your applications with disk volums using the iSCSI block protocol
+	Data written to these volumes can be backed up asynchronously as point in time snapshots, and stored as amazon EBS snapshots
+	Snapshots are incremental backups that capture only changed blocks, and are compressed to minimize storage
+
+
+	Stored Volumes:
+		data stored on premise, and asychronously backed up to aws
+		1gb - 16tb
+
+	Cached Volumes:
+		only most recent data is kept on premise, the rest is stored in s3 
+
+Exam tips:
+	File Gateway - for flat files, stored directly onto S3
+	Volume Gateway
+		Stored Volumes - Entire dataset is stored on site and is asynchronosuly backed up to S3
+		Cached Volumes - Entire dataset is stored on S3 and the most frequently accessed data is cached on site
+	Gateway virtual tape library (VTL)
+		Used for backup and uses popular backup applications like NetBackup, Backup, Exec, Veam ect
+

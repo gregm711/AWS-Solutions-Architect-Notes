@@ -1,0 +1,7 @@
+How to create a static website
+
+1) Create bucket
+2) Choose static website hosting
+3) Choose Index and error documents
+4) upload index and error pages
+5) Set read permissions to true for everyone
