@@ -5,7 +5,6 @@ Pricicing options
 	Reserved - provide you with a capacity reservation and offer a significant discount on the hourly charge for an instance. 1 year or 3 year terms
 	Dedicated Hosts - Physical EC2 server dedicated for your use. Can help to reduce costs by allowing you to use your existing server-bound software licenses
 
-
 On Demand
 	Users that want the low cost and flexibility of Amazon EC2 without any up-front payment or long-term commitment
 	Applications with short ter, spiky, or unpredictable workloads that cannot be interrupted
@@ -40,4 +39,49 @@ EC2 Family types
 	T -> Lowest cost, General Purpose 	-> Web Servers/ Small Dbs
 	P -> Graphics/ General Purpose	 	-> Machine learning/ bit coin mining 
 	X -> Memory optimimized 			-> SAP HANA/Apache spark
+
+EBS - Allows you to create storage volumes and attach them to EC2 instances. Once attached you create a file system on top of these volumes, run a database, or use them in any other way you would a block device. Amazon EBS volumes are placed in a specific avaliability zone where they are automatically replicated to protect you from the failre of a single component. 
+
+EBS Volume Types
+	General Purpose SSD (GP2)
+		General Purpose, balances performance and price
+		Ratio of 3 IOPS per GB with up to 10000 IOPS and burst to 3000 IOPS for volumes under 1Gib
+	Provisioned IOPS SSD (I01)
+		Designed for I/O intensive applications such as large relational or Nosql databases
+		Use if you need more than 10000 IOPS
+		Can provision up to 200000 IOPS per volume
+	Magnetic storage
+		Throughput optimized HDD (ST1)
+			Big Data
+			Data Wharehousing
+			Log Processing
+			Cannot be boot volume
+		Cold HDD (SC1)
+			Lowest cost storage for infrequently accessed workloads
+			file server
+			cannot be boot volume
+		Magnetic (standard)
+			Lowest cost per gig that is bootable. 
+			Ideal for workloads where data is accessed infrequently and applications where the lowest storage cost is important
+
+Exam Tips EC2
+	Know difference between 
+		On Demand
+		Spot
+		Reserved
+		Dedicated Host
+	Remember with spot instances
+		If you terminate the instance, you pay for the hour
+		If aws terminates the spot instance (price goes above bid) you get the hour it was terminated in for free
+
+	EBS consists of 
+		SSD - General purpose - GP2 - (UP to 10000 IOPS)
+		SSD- Provisioned IOPS- IO1 - (More than 10000 IOPS)
+		HDD Throughput Optimized - ST1 - frequently accessed workloads
+		HDD Cold -SC1 less frequently accessed data
+		HDD Magnetic - Standard - cheap, infrequently accessed storage
+	You CANNOT mount 1 EBS volume to multiple EC2 Instances, instead use EFS	
+	Termination protection is turne off by defualt, and must be manually turned on
+	ON an EBS backed instance, the default action is for the root EBS volume to be deleated when the instance is terminated
+
 

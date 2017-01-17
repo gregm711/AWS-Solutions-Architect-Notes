@@ -1,0 +1,8 @@
+How to start ec2 and ssh 
+
+1) select ami 
+2) select security permissions
+3) download key pair
+4) launch instance
+5) chmod 400 keypair.pem
+6) ssh ec2-user@IP -i keypair.pem

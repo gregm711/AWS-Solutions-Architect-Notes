@@ -1,0 +1,16 @@
+Questions I got wrong when taking practice tests:
+
+
+Minumum bytes in S3?
+answer 0 bytes
+
+
+Which two URL formats does S3 support to accessing bucket 'mynewbucket' ?
+http://mynewbucket.s3-aws-region.amazonaws.com
+http://s3-aws-region.amazonaws.com/mynewbucket
+
+To add an object to an S3 bucket the PUT operation is used. As part of crafting a PUT the programmer can add instructions call Request Headers. Which of the following are valid S3 Request Headers ?
+Content-Length
+Content-MD5
+x-amz-meta-
+x-amz-storage-class
