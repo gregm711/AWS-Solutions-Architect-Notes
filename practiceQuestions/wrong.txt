@@ -14,3 +14,60 @@ Content-Length
 Content-MD5
 x-amz-meta-
 x-amz-storage-class
+
+
+You have been asked by your employer to create an identical copy of your production environment in another region for disaster recovery purposes. In the list below, which AWS resources would you NOT need to recreate, because they are available universally across the console?
+
+Identity Access Management Roles
+Route53
+
+What are the valid methodologies for encrypting data on S3 (choose 4)?
+Server Side Encryption (SSE)-S3.
+SSE-C.
+SSE-KMS.
+A client library such as Amazon S3 Encryption Client.
+
+
+When coding a routine to upload to S3 you have the option of single part upload or multipart upload. For what reason might you choose to use Multipart upload ? (Select 4)
+
+Improved throughput
+Quick recovery from network issues
+Pause and resume object uploads
+Begin an upload before you know the final object size
+
+With SAML-enabled single sign-on, (choose all that apply)
+
+The portal first verifies the user's identity in your organization, then generates a SAML authentication response
+After the client browser posts the SAML assertion, AWS sends the sign-in URL as a redirect, and the client browser is redirected to the Console.
+
+When editing permissions (policies and ACLs) who does the concept of 'Owner' refer to ?
+The identity and email address used to create the account AWS account
+
+
+You work for a large media organisation who has traditionally stored all their media on large SAN arrays. After evaluating AWS they have decided to move their storage to the cloud. Staff will store their personal data on S3 and will have to use their Active Directory credentials in order to authenticate. This will be stored in a single S3 bucket, and each staff member will have their own folder within that bucket named after their employee ID. What steps below should you take in order to help set this up (choose 3).
+
+
+Create an IAM role
+Create either a federation proxy or identity provider
+Use AWS security token service to create temporary tokens
+
+
+In RDS when using multiple availability zones, can you use the secondary database as an independent read node?
+No
+
+
+If you are using Amazon RDS Provisioned IOPS storage with MySQL and Oracle database engines what is the maximum size RDS volume you can have by default?
+6TB
+
+
+When replicating data from your primary RDS instance to your secondary RDS instance, what is the charge?
+No Charge, Its free
+
+What happens to the I/O operations while you take a database snapshot/Backup.
+I/O operations to the database are suspended for the duration of the snapshot if it is a single AZ RDS instance.
+
+
+What AWS DB platform is most suitable for OLTP?
+RDS
+
+
