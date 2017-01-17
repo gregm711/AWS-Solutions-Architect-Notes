@@ -1,0 +1,43 @@
+What is EC2 - elastic cloud compute is a service that provides resizable compute capacity in the cloud.
+
+Pricicing options
+	On Demand - allow you to pay a fixed rate by the hour with no commitment
+	Reserved - provide you with a capacity reservation and offer a significant discount on the hourly charge for an instance. 1 year or 3 year terms
+	Dedicated Hosts - Physical EC2 server dedicated for your use. Can help to reduce costs by allowing you to use your existing server-bound software licenses
+
+
+On Demand
+	Users that want the low cost and flexibility of Amazon EC2 without any up-front payment or long-term commitment
+	Applications with short ter, spiky, or unpredictable workloads that cannot be interrupted
+	Applications being developed or tested on Amazon EC2 for the first time
+
+Reserved
+	Applications with a steady or predicatable usage
+	Applications that require reserved capacity
+	Users able to make upfront payments to recude their total computing costs even further
+
+Spot
+	Applications that have flexible start and end times
+	Applications that are only feasible at very low compute prices
+	Users with urgent computing needs for large amounts additional capacity
+
+Dedicated hosts
+	Useful for regulatory requirements that may not support multi tenent virtualisation
+	Great for licensing which does not support muti-tenancy or cloud deployments
+	Can be purchased On Demand
+
+KEY NOTE!
+	If the spot instance is terminated by amazon EC2, you will not be charged for a partial hour of usage. However, if you terminate the instance yourself, you will be charged for any hour in which the instance ran
+
+EC2 Family types
+	D -> Dense storage  				-> Fileservers/ Data Warehousing /hadoop
+	R -> Memory Optimized 				-> Memory intensive apps/DBs
+	M -> General Purpose  				-> Application Servers
+	C -> Compute Optimized 				-> CPU intensive apps
+	G -> Graphics intensive				-> Video Encoding / 3D application Streaming
+	I -> High Speed Storage				-> NoSQL DB's Data Warehousing
+	F -> Field prgrammable gate array 	-> Hardware acceleration for your code
+	T -> Lowest cost, General Purpose 	-> Web Servers/ Small Dbs
+	P -> Graphics/ General Purpose	 	-> Machine learning/ bit coin mining 
+	X -> Memory optimimized 			-> SAP HANA/Apache spark
+
