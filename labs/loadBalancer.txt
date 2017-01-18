@@ -1,0 +1,18 @@
+How to setup Load balancers with ec2
+
+1) ssh into ec2 instance
+2) start apache server (httpd) and have website running
+3) in aws console, move to load balancer section and create load balancer
+4) choose options and security group
+5) Configure health check ping path, and point to correct path to healthcheck file
+
+
+
+
+
+Elastic Load Balancers
+	Instances monitored by ELB are reported as:
+		InService, or OutofService
+	Health checks check the instance health by talking to it
+	ELBs have their own DNS name, and you are never given their IP address
+	Read the ELB FAQ!

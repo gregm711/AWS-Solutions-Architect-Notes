@@ -1,0 +1,18 @@
+steps for setting up aws cli
+
+1) create new user
+2) download user credentials
+3) create group with access to segment of aws
+4) aws s3 ls
+5) aws configure, copy and paste credentials
+
+
+Check user credentials
+1) cd .aws
+2) nano credentials
+
+
+
+
+Exam tip:
+	Cannot assign an IAM role to ec2 instance after it has been created.

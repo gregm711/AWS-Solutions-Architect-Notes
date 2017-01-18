@@ -1,0 +1,42 @@
+RAID
+
+
+RAID - Redundant array of independent disks
+	RAID 0 - striped, no redundancy , Good Performance
+	RAID 1 - mirrored redundancy
+	RAID 5 - Good for reads, bad for writes, AWS doe not ever recomment putting RAID 5 on EBS
+	RAID 10 - striped & mirrored, good redundancy , good performance
+
+When to implement RAID?
+	when you don't get enough I/O. 
+	create multiple volumes and put in RAID to increase I/O
+
+
+
+How to create RAID array
+
+1) Go into EC2 console , then to security groups
+2) Add security rule RDP (remote desktop protocol) port 339   TO REMOTE INTO WINDOWS SERVER
+3) Launch ec2 server, add additional volumes  ONLY SHOWED WINDOWS
+4) attach ec2 to security group
+6) get windows password by uploading key
+5) remote in using client
+6) disk management
+7) delete additional volumes
+8) choose new striped volume for all volumes
+9) choose NTFS
+
+How to take a snapshot of raid array
+
+Problem - Take a snapshot, the snapshot excludes data held in the cache by applications and the OS. This tends not to matter on a single volume, however using multiple volumes in a RAID arry, this can be a problem due to interdependencies of the array
+
+Solution - take an application consistent snapshot
+
+Need to:
+	stop applcation from writing to disk
+	Flush all caches to the disk
+
+By doing:
+	Freeze the file system 
+	Unmount RAID array
+	Shutting down the associated EC2 instance

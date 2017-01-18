@@ -1,0 +1,25 @@
+Cloud watch
+	for detailed monitoring of instance metrics
+	Available metrics
+		CPU
+		Disk
+		Network in
+		Status
+
+Cloud watch alarms:
+	Set alarms when state exceeds given threshold
+	set actions from alarm, such as terminating or stopping instance
+
+
+Exam Tips:
+	Standard Monitoring = 5 minutes
+	Detailed Monitoring =1 minute  - not free
+	Dashboards to see what is happening in aws environment
+	alarms to notify when particular thresholds are hit
+	Events - Cloutwatch events help to respond to state changes 
+	logs - cloudwatch logs help you to aggregate monitor and store logs
+
+	
+
+
+

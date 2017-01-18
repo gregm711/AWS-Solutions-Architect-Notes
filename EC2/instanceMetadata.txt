@@ -1,0 +1,9 @@
+How to access instance metadata from aws cli
+
+
+
+
+1) ssh into ec2 instance
+2) curl http://169.254.169.254/latest/meta-data/  to get options
+3) curl http://169.254.169.254/latest/meta-data/public-ipv4 > somefile.html
+4)

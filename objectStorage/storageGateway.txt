@@ -33,4 +33,9 @@ Exam tips:
 		Cached Volumes - Entire dataset is stored on S3 and the most frequently accessed data is cached on site
 	Gateway virtual tape library (VTL)
 		Used for backup and uses popular backup applications like NetBackup, Backup, Exec, Veam ect
+	Termination Protection is turned off by default , you must turn it on
+	On an EBS backed instance, the default action is for the root EBS volume to be deleted when the instance is terminated
+	EBS root volume of DEFAULY AMI cannot be encrypted. You can use a third party tool to encyrpt the root volume, or this can be done when creating AMIs in the console.
+	Additional volumes can be encrypted
 
+	

@@ -1,0 +1,8 @@
+How to  setup launch configuration  and auto scaling
+
+
+
+1) have ec2 and load balancer connected
+2) in console navigate to auto scaling
+3) create auto scaling group and ec2 instances across multiple availability zones
+4) select options for grace period and auto scaling threshold params

@@ -1,0 +1,35 @@
+How to create a new volume
+
+1) move to volume section of ec2 console
+2) create volume and choose options
+3) attach volume to web server
+
+
+Mount volume
+
+1) ssh into server
+2) lsblk to see all disks
+3) mkdir fileServer
+4) format volume  -> mkfs -t ext4 /dev/xvdf 
+5) mount /dev/xvdf /fileServer
+
+Create Snapshot
+
+1) in ssh server -> umount /dev/xvdf
+2) in aws console detach volume
+3) actions -> create snapshot
+
+Create Volume from snapshot
+
+1) in aws console move to snapshot section
+2) create volume from snapshot
+
+
+
+
+Takeaways:
+	Volumes exist on EBS , and are virtual hard disks
+	Snapshots exist on S3
+	Snapshots are point in time copies of volume
+	Snapshots are incremental, this means tha only blocks that have changed since last snapshot are moved to S3
+	

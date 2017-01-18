@@ -1,0 +1,18 @@
+Rules applied to security groups take affect immediately.
+
+
+Security groups are stateful!
+If you take away an outbound rule for outside traffic but have an inbound rule for incoming traffic, it will add an outbound rule automatically
+
+
+Takaways:
+	All inbound Traffic is blocked by default
+	All outbound traffic is allowed
+	Changes take effect immediately
+	You can have any number of EC2 instances within a security group
+	You can have multiple security groups attached to EC2 instances
+	Security groups are stateful
+		If you create an inbound rule allowing traffic in, that traffic is autmatically allowed back out again
+	You cannot block specific IP addresses using security Groups, instead use Network access Control Lists
+	You can specifify allow rules, but not deny rules
+	

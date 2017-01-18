@@ -1,0 +1,11 @@
+How to add bash script to aws ec2 instance
+1) create instance
+2) in step 3: Configure instance details, add script in advanced Details
+
+#!/bin/bash
+yum install httpd -y
+yum update -y
+aws S3 cp s3://asdkasdns/index.html /var/www/html/ 
+service httpd start
+chkconfig httpd on
+

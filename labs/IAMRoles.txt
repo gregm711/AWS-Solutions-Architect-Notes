@@ -1,0 +1,13 @@
+
+1) in Iam console, create role and give access to ec2
+2) launch ec2 instance
+3) select IAM role in options pane
+
+
+
+Exam tips:
+	Roles are more secure than storing your acces key and secret access key on ec2 instances
+	Roles are much easier to manage
+	Roles can only be assigned when EC2 is being provisioned
+	Roles are universal and can be used in any region
+	CANNOT ADD IAM ROLE AFTER LAUNCH
