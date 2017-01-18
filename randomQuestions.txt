@@ -77,8 +77,6 @@ Outputs
 Mappings
 
 
-
-
 1) a
 
 2) b
@@ -109,3 +107,16 @@ B. infrequently accessed data.
 C. data archives.
 D. frequently accessed data.
 E. cached session data.
+
+
+
+
+when copying an AMI, which of the following types of information must be manually copied to the new instance (Choose three)
+
+User data
+Correct
+Launch permissions
+Correct
+S3 bucket permissions
+Correct
+User-defined tags

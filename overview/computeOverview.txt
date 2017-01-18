@@ -1,0 +1,39 @@
+
+Region:
+	geographical area consisting of 2 or more avaliability zones (data centers)
+
+
+Edge location:
+	Cacheing location for CDN (content delivery network)
+
+VPC: 
+	virtual private cloud
+
+Route53:
+	DNS service ,port 53 is the port opened for DNS
+
+CloudFront:
+	CDN for cached objects
+
+Direct Connect:
+	Dedicated line for connecting to AWS
+
+EC2:
+	Virtual machines in cloud
+
+EC2 Container Service:
+	EC2 with docker
+
+Elastic Beanstalk:
+	service for provisionign entire applications
+
+Lambda:
+	serverless architecture where code responds to events
+
+Light Sail:
+	Out of the box cloud, for newbies to aws to get up and running
+
+
+
+
+
