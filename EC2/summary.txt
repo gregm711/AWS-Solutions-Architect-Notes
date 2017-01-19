@@ -1,0 +1,117 @@
+
+
+Know difference between:
+	On demand
+	Spot
+	Reserved
+	Dedicated Host
+	Remember with spot instances:
+		if you terminate the instance, you pay for the hour
+		if aws terminates the instance, you get the hour for free
+
+EC2 Family types
+	D -> Dense storage  				-> Fileservers/ Data Warehousing /hadoop
+	R -> Memory Optimized 				-> Memory intensive apps/DBs
+	M -> General Purpose  				-> Application Servers
+	C -> Compute Optimized 				-> CPU intensive apps
+	G -> Graphics intensive				-> Video Encoding / 3D application Streaming
+	I -> High Speed Storage				-> NoSQL DB's Data Warehousing
+	F -> Field prgrammable gate array 	-> Hardware acceleration for your code
+	T -> Lowest cost, General Purpose 	-> Web Servers/ Small Dbs
+	P -> Graphics/ General Purpose	 	-> Machine learning/ bit coin mining 
+	X -> Memory optimimized 			-> SAP HANA/Apache spark
+
+	handy acryonmy: Dr Mc Gift PX
+
+
+EBS (Elastic Block Storage) consists of:
+	SSD General Purpose - GP2 - (Up to 10000 IOPS)
+	SSD Provisioned IOPS -I01 - (More than 10,000 IOPS)
+	HDD Throughput Optimized - ST1 - frequently accessed workloads
+	HDD COld SC1 - less frequently accessed data
+	HDD Magnetic -standard - cheap, infrequently accessed data. Can be used a a boot volume
+	You cannot mount 1 EBS volume to multiple EC2 instances, instead use EFS
+
+
+EC2 Lab Tips:
+	Termination protection is turned off by default, you must turn it on
+	On an EBS-backed instance, the deault action is for the root EBS volume to be deleted when the instance is terminated
+	Root volumes cannot be encypted by defualt, you need a third party tool (ex bitlocker) to encrypt the root volume
+	Additional Volumes can be encrypted
+
+Volumes vs snapshots
+	Volumes exist on EBS
+		Virtual hard disk
+	Snapshots exist on S3
+	You can take a snapshot of a volume, this will store that volume on S3
+	Snapshots are point in time copies of volumes
+	Snapshots are incremental, this means tha only the blocks that have changed since your last snapshot are moved to S3
+	First snapshots take time
+	Security
+		Snapshots of encyptde volumes are encrypted automatically
+		Volumes restored from encrypted snapshots are encrypted automatically
+		You can share snapshots but only if they are unencrypted
+		These snapshots can be shared to other AWS accounts or made public
+	Snapshots of root device volumes
+		need to stop the instance , then take a snapshot
+
+EBS vs instance store:
+	Instance store = Ephemeral storage
+	Instance store volumes cannot be stopped or all data will be lost
+	EBS backed instances can be stopped and no data will be lost
+	BOTH can be rebooted with loss of data
+	By default, both Root volumes will be deleted on termination, however with EBS volumes, you can tell AWS to keep the root device volume
+
+Snapshots of RAID Array
+	Stop the application from writing to disk
+	Flush all caches to the disk
+	How to do the above (3 ways):
+		Freeze file system 
+		Unmount the RAID array
+		shutting down associated EC2 instance  ( easiest)
+
+Amazon Machine Images
+	AMI's are regional. You can only launch an AMI from the region which it is stored.
+	You can copy the AMI to other regions using the console CLI or the Amazon EC2 API
+
+
+Cloud watch
+	Standard monitoring  = 5 minutes
+	Detailed monitoring = 1 minute (cost extra)
+	CloudWatch is for performance monitoriing
+	CloudTrail is for auditing
+	Dashboards to see what is going on in AWS environment
+	Alarms - Allows you to set Alarms that notify you when particular thresholds are hit
+	Events - Cloud watch events help you respond to state changed in your AWS resources
+	Logs - Cloud watch  logs helps to aggregate, monitor and store logs
+
+
+Roles
+	Roles are more secure than storing your access key and secret access key on individule EC2 instances
+	Roles are easier to manage
+	Roles can only be assigned when that EC2 instance is being provisioned
+	Roles are universal and can be used in any region
+
+
+Instance Meta data
+	Used to get information about an instance ( such as public IP)
+	curl http://169.254.169.254/latest/meta-data/
+	No such thing as user-data
+
+
+EFS ( Elastic file storage)
+	Supports the Network file system version 4 (NFSv4)
+	Only pay for the storage you use (no pre-provisioning required)
+	Can scsale up to the petabytes
+	Can support thousands of concurrent NFS connections
+	data is stored across multiple AZ's within a region
+	Read after Write Consistency
+
+Lambda
+	Aws lambda is a compute service where you can upload your code and creat a lambda function. AWS lambda takes care of provisioning andmanaging the servers that you use to run the code. No need to worry about operating systems, patching, scaling ect. 
+	can be used in the following ways
+		AS an event driven compute service where AWS lambda runs your code in response to events. These events could be changes to data in an Amazon S3 bucket or an Amazon dynamoDB table
+		As a compute service to run your code in response to Http requests using AMazon API gateway or API calls made using AWS SDKs.
+
+
+

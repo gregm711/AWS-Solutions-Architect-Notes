@@ -1,0 +1,18 @@
+Placement group
+
+A placement group is a logical grouping of instances withing a single availability zone. Using placement groups enables applications to participate in a low-latency 10 Gbps network. Placement groups are recommended for applications that benefit from low network Latency, high network throughput, or both.
+
+examples:
+	Hadoop cluster
+	Cassandra nodes
+
+
+EC2 Placement Groups
+	A placement group can't span multiple availability zones
+	The name that you specify for a placement group must be unique within your aws account
+	only certain types of instances can be launched in a placement group (Compute Optimized, GPU, Memory Optimized, Storage Optimized)
+	AWS recommended homogenous instances within placement groups
+	you cant merge placement groups
+	you can't move an existing instance into a placement group. 
+	You can create an AMI from your existing instance and then launch a new instance from the AMI into a placement group
+	

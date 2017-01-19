@@ -1,0 +1,19 @@
+Lambda
+
+AWS lambda is a compute service that runs your code in response to events and automatically manages the underlying compute resources for you
+
+Aws lambda can automatically run code in response to modifications to objects in Amazon S3 buckets, messages arriving in Amazon Kineses streams, or table updates in Amazon dynamodb
+
+Lambda runs your code on high availability compute infrastructure and performs all the administration of the compute resources, including server and operating system maintenance, capacity provisioning and automatic scaling, code and security patch deploymen , and code monitoring and logging
+
+What events trigger Lambda?
+
+You can use AWS lambda to respond to table updates in DynamoDb, modifications in Maazon S3 buckets, messages arriving in Amazon Kinesis stream,  AWS API call logs created by AWS Cloud Trail, and custom events from mobile applications, web applications, or other web services.
+
+Lambda:
+	Supports - Javascript, 
+	Pricing
+		1st million requests free
+		$0.20 for next million requests
+	Duration:
+		Calculated from the time your code begins executing until it returns or otherwise terminates, rounded up to the nearest 100ms. The price depends on the amount of memory you allocate to your function. You are charges $0.00001667 for every GB-second used

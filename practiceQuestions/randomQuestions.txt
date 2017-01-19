@@ -77,8 +77,6 @@ Outputs
 Mappings
 
 
-
-
 1) a
 
 2) b
@@ -98,3 +96,27 @@ Mappings
 9) a, b, d
 
 10) c
+
+
+https://markosrendell.wordpress.com/2013/12/12/aws-certified-solutions-architect-sample-questions-answered-and-discussed/
+
+Amazon Glacier is designed for: (Choose 2 answers)
+
+A. active database storage.
+B. infrequently accessed data.
+C. data archives.
+D. frequently accessed data.
+E. cached session data.
+
+
+
+
+when copying an AMI, which of the following types of information must be manually copied to the new instance (Choose three)
+
+User data
+Correct
+Launch permissions
+Correct
+S3 bucket permissions
+Correct
+User-defined tags
