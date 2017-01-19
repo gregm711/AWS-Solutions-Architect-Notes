@@ -53,4 +53,20 @@ Exam Tips
 	Elastic load balancers do not have a pre-definied IPv4 address you resolve to them using a DNS name
 	Understand difference between an Alias record and a CNAME
 	Always choose Alias record over a CNAME if possible
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

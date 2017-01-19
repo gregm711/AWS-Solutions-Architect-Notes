@@ -1,0 +1,14 @@
+Exam Tips
+	ELBs do not have a pre-defined IPv4 addresses you resolve to them using a DNS name
+	Understand the difference between Alias Record and a CName
+		Alias is free
+		CNAME has a cost
+		CNAME can't take a naked adress
+		Always choose ALias if possibel
+	Routing policies
+		Simple
+		weighted
+		latency
+		failover
+		Geolocation
+		

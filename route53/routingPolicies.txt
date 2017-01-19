@@ -1,0 +1,34 @@
+
+
+
+Route 53 Routing Policies
+	Simple
+	Weighted
+	Latency
+	Failover
+	Geolocation
+
+
+Simple
+	The defualt routing policy when you create a new record set. This is most commonly used when you havea  single resource that performs a given function for your domain, for example, one web server that serves content for the http://acloud.guru website.
+	No intelligence built in
+
+Weighted
+	Let you split your traffic based on different weights assigned
+	ex send 10% to US-EAST-1 and 90% to US-WEST-1
+
+Latency
+	Allows you to route your traffic based on the lowest network latency for your end user (wich region will give them the faster response time)
+	To use
+		Create a latency resource record set for amazon EC2 resource in each region that hosts your website.
+		When Amazon Route 53 recieves a query it selects the latency resource record set for the region that gives the user the lowest latency, and route 53 responds with the value associated with that resource record set
+
+Failover
+	Failover routing policies are used whn you want to create an active/passive set up.
+	For example you may want your primary site to be in US-WEST-1 and your secondary DR site in US-EAST-1
+	Route53 will monitor the health of your primary site using a health check
+	A health check monitors the health of your end points
+
+
+Geolocation
+	Routing based on location 

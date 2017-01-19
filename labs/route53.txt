@@ -1,0 +1,7 @@
+How to setup route 53 with load balancer
+
+
+1) create ec2 instance
+2) create ELB ( elastic load balancer) and attach to ec2
+3) in route53, create hosted zone
+4) create A record alias to Load balancer from domain name
