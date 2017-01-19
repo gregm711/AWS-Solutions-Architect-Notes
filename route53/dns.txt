@@ -1,0 +1,56 @@
+DNS
+
+DNS is used to convert domain names to an IP address
+
+IP adress types
+	IPv4
+	IPv6
+
+IPv4
+	The IPv4 space is a 32 bit field and has over 4 billion differernt addresses
+
+
+IPv6
+	was created to sole this epletion issue and has an address space of 128 bits wich is ~340 undecillion addresses
+
+
+Top level Domains
+	The last word in a domain name is the top level domain (.com, .edu .org)
+	Second word (opptional) is the second level domain (.co.uk)
+	Top level domains are controlled by the Internet Assigned Numbers Authority (IANA) in a root zone database which is essentially a database of all available top level domains
+
+
+Domain Registrars
+	there to organize domain names and insure there is no duplication
+	They have to be registered with InterNIC, a service of ICANN. 
+	Each domain name becomes registeres in a central database known as the WhoIS database
+
+SOA Records
+	Name of the server that supplied the data for the zone
+	admin of zone
+	current version of the data file
+	number of seconds a secondary name server should wait before checking for updates
+	number of seconds a secondary name server should wait before retrying a failed zonse transfer
+	maximum number of seconds that a secondary name server can use data before it must either be refreshed or expire
+	The defualt numberof seconds for the time-to-lve file on resource records
+
+NS Records (Name server)
+	used by the top level domain servers to direct traffic to server
+
+TTL 
+	the length that a DNS record is cached on either the Resolving server or the users own local PC is equal to the value of the TTL in seconds. the lower the TTL the faster changes to DNS records take to propagate throughout the internet
+
+CNAMES 
+	A cononical Name (CNAME) can be used to resolve one domain to another
+	ex www.asdas.com -> asdas.com
+
+Alias Records
+	Used to map resource record sets in your hosted zone to Elastic Load Balancers, Cloud front distributions or S3 buckets thatare configured as websites
+	Alias record work like a CNAME record to map one DNS name to another target
+	A CNAME can't be used for naked domain names (zone apex)
+
+Exam Tips
+	Elastic load balancers do not have a pre-definied IPv4 address you resolve to them using a DNS name
+	Understand difference between an Alias record and a CNAME
+	Always choose Alias record over a CNAME if possible
+	
