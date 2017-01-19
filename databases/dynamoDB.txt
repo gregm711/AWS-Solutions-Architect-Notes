@@ -1,0 +1,19 @@
+what isDynamo dB
+fast and flexible NoSQL database service for all applications. 
+fully managed database and supports both document and key-value data models.
+
+
+DynamoDB
+	Stored on SSD storage
+	Spread across 3 geoghraphically distinct data centers
+	Eventual consistent reads (defualt)
+		consistency across all copies is usually reached within a second
+	Strongly consistent reads
+		returns a result that reflects all writes that recieved a successful response prior to the read
+
+Pricing
+	Provisioned Throughput capacity
+		Write Throughput 0.0065 per hour for every 10 units
+		read throughput  0.0065 per hour for every 50 units
+		Storage costs of 0.25Gb per month
+		

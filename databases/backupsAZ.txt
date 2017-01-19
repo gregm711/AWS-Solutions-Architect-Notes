@@ -1,0 +1,58 @@
+Back ups, multi-az & Read Replicas
+
+
+Automated Backups
+	Two types of backups
+		Automated Backups 
+			recover your db to any point in time within a retention period (between 1-35 days)
+			Take full daily snapshots and store transaction logs throughout the day
+			AWS will first choose the most recent daily back up and then apply transaction logs relevant to that day.
+			AWS will choose most recent backup and then apply transaction logs relevent to that day
+			This allows you to do a point in time recovery down to a second within the retention period
+			Automated backups are enabled by default. Data is stored in S3 and you get free storge space equal to the size of your database
+			ex if RDS = 10GB you wil get 10GB worth of storage
+			Backups are taken within  a defined window. During the backup window, storage I/O may be suspended while your data is being backed up and you may experience elevated latency
+		DB snapshots
+			Done manually
+			Stored even after RDS is deleted
+	Restoring form either type of backup results in new RDS instance with new endpoint
+
+Encrpytion
+	encyrption at rest is supported for MySQL , Oracle, SQL Server, POstgreSQL & MariaDB
+	Encryption is done using the AWS Key management service
+	Once RDS instance in encytpred the data stored at rest in the underlying storage is encyrpted, as are its automated backups, read replicas and snapshots
+	You cannot encrypt an existing DB instance, you must create a new instance and migrate over old data
+
+Multi-AZ
+	RDS instances in different availability zones
+	Failovers don't change the endpoints
+	Synchronizes writes between two dbs
+	Not used to improve performance only for security
+	Offered for 
+		SQL Server
+		Oracle
+		MySQL
+		PostgreSQL
+		MariaDB
+
+
+Read Replica
+	Creates a read-only copy of production DB
+	Uses Asynchronous replication from the primary RDS instance to create replica
+	Use for very read heavy database workloads
+	Offered for:
+		MySQL
+		PostgreSQL
+		MariaDB
+	Used for scaling not DR (disaster recovery)
+	must have automatic backups turned on in order to deploy a read replica
+	can hve up to 5 read replicas copies of any DB
+	you can have read replicas of read replicas (watch out for latency)
+	REad replicas have their own DNS end point
+	Cannot have a read replicas that have Multi-AZ
+	can create read replicas of Multi-AZ source DB
+	can be promoted to become their own DB
+
+DynamoDB vs RDS
+	DyanmoRB offers push button scaling , no down time
+	RDS requires manually scaling 

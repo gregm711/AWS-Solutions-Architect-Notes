@@ -1,0 +1,46 @@
+What is redshift?
+
+Fast and powerful petabyte scale data warehouse in the cloud
+start at 0.25 per hour 
+Offers OLAP (online analytics processing)
+
+
+Redshift Configuration
+	Single Node(160Gb)
+	Multi-node
+		Leader Node(manages client connections and recieves queries)
+		Compute Node(store data and perform queries and computations) up to 128 Compute Nodes
+
+Columnar Data Storage:
+	data stored by column not as  a series of rows
+	Row based data storage good for transaction procesing
+	column based better for warehousing and analytics
+	queries often involved in aggregating data over large data sets
+	since only the columns involved in the queries are processed and columnar data is stored sequentially on the storage media, column-based data is stored sequentially on the storage media, column based systems require far fewer I/O's
+
+
+	Advanced Compression
+		Columnar data can be compressed more because similar data is stored sequentially on disk. 
+		Redshift doesnt require indexes or materialzed views and uses less space than traditional relational database systems
+		When loadign data into an empty table redshift automatically samples data and selects the best compression scheme
+
+	Massively Parallel Processing (MPP)
+		redshift distributes the data and query load across all nodes. 
+		adding nodes is easy
+
+Pricing
+	Compute node hours (total number of hours run across all compute nodes)
+	Not be charged for leader node hours, only compute nodes will incur charges
+	Backup
+	Data transfer within a VPC
+
+Security
+	Encyrpted in transit using SSL
+	At rest using AES-256
+	by default takes care of key management
+		Manage your own keys through HSM
+
+Availability
+	Only in 1AZ
+	can restore snapshots to new AZ in the event of an outage
+	

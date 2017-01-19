@@ -1,0 +1,19 @@
+What is Aurora
+
+A MySql compatible relational database engine
+provides up to five times better performance than MySQL at a price 1/10th that of a commercial database while delivering similar performance and availability
+
+
+
+Aurora Scaling
+	Start with 10GB scales in 10Gb incrememtns up to 64TB
+	Compute resources can scale up to 32vCPUs and 244Gb of memory
+	2 copies of your data is contained in each availability zone, minumum of 3 availability zones. 6 copies
+	Aurora is designed to reansparentl handle the loss of up to two copies of data without affecting database write availability and up to three copies without affecting read availability
+	Aurora is self healing, searching for errors on disk and fixing them
+
+Aurora replicas
+	2 types of replicas
+		Aurora replicas (currently 15)
+		MySql read replicas (currently 5)
+		

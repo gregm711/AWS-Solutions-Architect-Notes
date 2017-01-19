@@ -1,0 +1,53 @@
+DB types
+	RDS - OLTP (online transaction processing)
+		SQL Server 
+		MySql
+		Postgres
+		Oracle 
+		Aurora
+		MariaDB
+	NoSQL
+		DynamoDB
+	Redshift - OLAP
+	Elasticache - in memory caching
+		memcached
+		redis
+
+
+multi-AZ
+	secondary db in second AZ
+	failover works with same endpoint
+
+read replica
+	read  heavy db set up read replica to boost performance
+
+Aurora scaling
+	2 copies of your data is contained in each AZ, minimum 3 AZs , so 6 copies of data
+	Designed to handle loss of up to two copies of data without affecting database write availability and up to 3 copies without affecting read availability
+	Self healing
+
+Aurora replicas
+	2 types of replicas available
+		Aurora replicas (currently 15)
+		MySQL Read Replicas (currently 5)
+
+Dynamo Db vs RDS
+	push button scaling
+
+Dyanmo DB
+	SSD
+	3 geo locations
+	eventual consistent reads (defualt)
+	strongly consistent reads
+
+redshift
+	data warehousing
+	single node (160Gb)
+	Multi-node
+		leader node (manages client connections and recieves queries)
+		compute node (store data and perform queries and computations). Up to 128 Compute Nodes
+
+Elasticache
+	good for high read dbs
+	Memcached 
+	redis

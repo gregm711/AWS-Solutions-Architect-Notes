@@ -1,0 +1,16 @@
+What is Elasticache
+
+holds data in in-memory SSD storage
+improves latency and read-heavy application workloads or compute heavy intesive workloads
+Cacheing improves application performance by storing data in memory for  low-latency access.
+
+Types of Elasticache
+	Memcached
+		memory object caching system. 
+		Elasticache is protocol complient with memcached, so popular tools that your use today with existing memcached environments will work seamlessly with the service
+	Redis
+		popular open source in memory key value store that supports data structures such as sorted sets and lists
+		Elastic cache suports Master/Slave replication and Multi-AZ whcih can be used to achieve cross AZ redundancy
+Exam tips
+	Elastic cache is good choice if database is read heavy and not prone to frequent changing
+	Redshift helps when databse is feeling stress from management keeps running OLAP transactions

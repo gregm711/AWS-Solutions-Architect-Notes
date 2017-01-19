@@ -1,0 +1,6 @@
+How to create RDS instance
+
+
+1) create security group and add TCP for ip from ec2 security group
+2) create RDS
+3) done

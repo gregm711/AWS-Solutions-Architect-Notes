@@ -1,0 +1,55 @@
+Databases
+
+
+
+Types
+	RDS
+	DynamoDB (NoSQL)
+	Redshift Data Wherehousing
+	DMS	 - Migration service
+
+
+RDS
+	SQL server
+	Oracle
+	MySQL Server
+	PostgresQL
+	Aurora
+	MariaDB
+
+
+Non Relation Databases
+	Dynamo DB
+		Document oriented
+			Collection = Table
+			Document = row
+			Key Value pairs = feilds
+
+Data Warehousing
+	Used for business intelligens. Tools like cognos, jaspersoft , SQL Server reporting services, Oracle Hyperion, SAP NetWeaver
+	Used to pull in very large and complex data sets. Usually used by management to do queries on data (such as current performance vs targets)
+
+OLTP vs OLAP
+	Online Transaction processing (OLTP) differes from online analytics processing in terms of the types of queries run.
+
+	OLTP Example
+		Order number 128932184
+		pulls up row of data for order
+
+	OLAP example
+		Net profit for specific product
+		Need lots of different bits of info - tough on production DB!
+
+	Data warehousing databases use differrent type of architecture both from a database perspective and infrastructure layer
+
+Elasticache
+	Web service that makes it easy to host an in-memory cache in the cloud. 
+	Memcached 
+	Redis
+
+DMS
+	Database Migration Service
+	Able to migrate production db to AWS
+	AWS Scheme conversion tool automatically converts the source databse schema and custom code over
+
+
