@@ -1,0 +1,56 @@
+What is a NAT instance?
+	Ec2 instance that acts as a network address translator 
+
+
+Creating custom NAT through ec2:
+
+1) Launch ec2 instance
+2) choose community ami, vpc-nat
+3) deploy into VPC, Public subnet
+4) Nat instances must have a security group
+5) actions-> Networking  -> disable source destination check
+6) Make sure security group for NAT and public subnet have HTTPS rule
+7) Go into VPC main route table, and add  route from 0.0.0.0/0 to NAT ** MAKE SURE IT IS /0
+
+
+
+Creating NAT Gateway
+
+1) In VPC section -> Nat Gateway
+2) create NAT Gateway in public subnet, and create elastic IP if needed
+3) Edit route table to include route from main table to 0.0.0.0/0 to Nat gateway
+
+NAT VS NAT Gateway
+	Nat:
+		single point of failure
+		manage security groups and source destination checks
+		security patches are managed by you
+	NAT Gateway
+		Auto scaling
+		manages security
+		optimzed
+		aws handles security patches
+
+
+
+
+Exam Tips
+	NAT instance:
+		When creating a NAT instance, disable source / destination check on the instance
+		NAT instance must be in a public subnet
+		there must be a route out of the private subnet to the NAT instance in order for this to work
+		the amount of traffic a NAT instance supports depends on the instance size. If you are bottlenecking, increase the instance size
+		You can create high availability using Autoscaling Groups, multiple subnets in different AZ's and a script to automate failover
+		Behind a security group
+	NAT Gateway
+		perferred by the enterprise
+		scale automatically up to 10Gbs
+		no need to patch security
+		Not associated with security groups
+		automatically assigned a public IP
+		Remember to update your route tables
+		No need to disable Source/Destination checks
+		
+
+
+

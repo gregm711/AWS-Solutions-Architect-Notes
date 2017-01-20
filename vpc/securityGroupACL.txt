@@ -1,0 +1,12 @@
+
+Security groups vs  Network access lists (ACL):
+	Security groups
+		operate on instance level
+		statefull -> return traffic is automatically allowed 
+		all rules are evaluated before deciding if traffic is allowed
+	ACL
+		operates on the subnet layer
+		very fine grained
+		rules are evaluated in numerical order deciding weather traffic is allowed
+
+
