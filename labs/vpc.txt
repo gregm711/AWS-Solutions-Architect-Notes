@@ -1,0 +1,26 @@
+Creating a VPC
+
+1) navigate to VPC dashboard in AWS console
+2) create VPC
+	CIDR block: 10.0.0.0/16
+	Tenancy: 	Default
+3) route table, network ACL , and security group is created automatically after VPC launches
+4) Create subnet
+	Availability zone: 1
+	CIDR block: 10.0.1.0/24
+5) Create second subnet
+	Availabilty zone: 	2
+	CIRD block: 10.0.2.0/24
+5) create internet Gateway and attach to VPC (CAnnot attach multiple IGW's to VPC)
+6) in route table section, create public route table
+7) add route from 0.0.0.0/0 to IGW ** MAKE SURE IT ENDS WITH /0
+8) create subnet association from public subnet (10.0.1.0/24) to public route table
+9) in public subnet, allow assinging public IP
+10) in EC2, create instance in public subnet 
+11) create security group when making EC2 that allows ssh and inbound internet
+
+END OF FIRST PART, BEGIN OF SECOND
+
+12) create ec2 in private subnet (10.0.2.0/24)
+13) copy key pair from local computer to public facing webserver
+14) ssh into private instance using public facing webserver
