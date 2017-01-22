@@ -4,9 +4,39 @@ Security groups vs  Network access lists (ACL):
 		operate on instance level
 		statefull -> return traffic is automatically allowed 
 		all rules are evaluated before deciding if traffic is allowed
+		only applies to instance that is specified to be behind it
 	ACL
 		operates on the subnet layer
 		very fine grained
 		rules are evaluated in numerical order deciding weather traffic is allowed
+		applied to all instances within the subnet automatically
+
+
+default network ACL
+	all inbound and outbound traffic is allowed 
+
+custom netowk ACL
+	on creation of custom ACL all inbound and outbound is NOT allowed by default
+
+
+ACL
+	one subnet can only be associated with one ACL
+	after creating acl and rules, add TCP on port 1024-65535 from 0.0.0.0/0 for ephemeral ports
+
+
+Exam tips:
+	VPC automatically comed with ACL and all traffic is allowed
+	You can create custom network ACL, and all traffic is denied by default
+	Each subnet withing VPC must be associated with a network ACL. 
+	If you dont's expliictly associate subnet with ACL, it will automatically be assoicated with default ACL
+	You can associate an ACL with multiple subnets, but a subnet can only be associated with one ACL at a time.
+	When you associate a network ACL with a subnet, the previous association is removed.
+	A network ACL contains a numbered list of rules that is evaluated in order, starting with the lowest numbered rule
+	Network ACL has separate inbound and outbound rules, and each rule can either allow or deny traffic
+	Network ACLs are stateless, responses to allowed inbound traffic are subject to the rules for outbound traffic (and vice versa)
+	Block IP Addresses using network ACLS not security groups
+	
+
+		
 
 
