@@ -1,0 +1,6 @@
+Note, only on sys ops exam
+
+1) in VPC console, create flow log 
+2) in Cloud watch , create log  group
+3) in VPC, attach VPC to log stream
+

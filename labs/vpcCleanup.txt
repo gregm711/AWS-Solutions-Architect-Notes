@@ -1,0 +1,7 @@
+
+
+1) in ec2 console delete instances
+2) delete load balancer
+3) Delete NAT Gateway
+4) delete VPC
+

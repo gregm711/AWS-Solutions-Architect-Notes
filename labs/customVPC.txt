@@ -1,0 +1,7 @@
+
+
+1) create classic load balancer within custom VPC
+2) Select public subnets
+
+Tip
+	to achieve high availablilty, have two public subnets to route traffic through load balancer to

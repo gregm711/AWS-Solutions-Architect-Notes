@@ -1,0 +1,17 @@
+NAT 
+	routes internet traffic to private/public subnets
+	Cannot be used for SSH
+
+
+Bastion
+	used for admin purposes only
+	placed in public subnet
+	used to ssh into instances within private subnet
+
+
+
+
+Exam tips
+	A NAT is used to provide internet traffic to EC2 instances in private subnets
+	A Bastion is used to securely administer EC2 instances (using SSH or RDP) in private subnets
+	

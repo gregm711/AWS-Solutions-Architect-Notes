@@ -1,0 +1,45 @@
+Exam tips
+	General
+		think of VPC as a logical datacenter in AWS
+		Consists of IGW's (or virtual private gateways) Route tables, Network Access Control lists, subnets, security groups
+		1 subnet = 1 Availability Zone
+		Security groups are stateful, Network Access Control lists are stateless
+		Can peer VPCs both in same accoutn and with other AWS accounts
+		No transitive peering
+	NAT instances
+		When creating a NAT instance, Disable source/ destination check on the instance
+		NAt instances must be in a public subnet
+		Must have an elastic IP address to work
+		There must be a route out of the private subnet to the NAT instance
+		The amount of traffic that a NAT instance supports depends on the instance size. 
+		Create high availability using autoscaling GRoups, multiple subnets in different  Availablility zones and a script to automate failover
+	NAT Gateways
+		very new addition to AWS
+		perferred by the enterprise
+		Scale automatically up to 10GBS
+		no need to patch securities
+		Not associated with security groups
+		automatically assigned a public ip address
+		remember to update your route tables
+		no need to disable source/destination checks
+	Network ACLS
+		VPC automatically comes a default network ACL and by default it allows all outbound and inbound traffic
+		you can create custom network ACL. by default, each custom network ACL denies all inbound traffic until you add rules
+		Each subnet in VPC must be associated with a network ACL. if you don't explicityly associate a subnet with a networkk ACL, the subnet is automatically associated with the default network ACL
+		You can associate a network ACL with multiple subnets, however a subnet can be associated with only one network ACL at a time
+		When you associate a network ACL with a subnet, the previous association is removed
+		a network ACL contains a numbered list of rules that is evaluated in numerical order
+		Has separate inbound and outbound rules, and each rule can either deny or allow traffic
+		Are stateless! responses to allowed inbound traffic are subject to the rules for outbound traffic
+		Block IP addresses using netowkr ACL's not security groups\
+	NAT vs Bastions
+		NAT is used to provide internet traffic to EC2 instances in private subnets
+		Bastion is used to securely administer EC2 instances (using SSH or RDP) in private subnets
+	REsillient Architecture
+		Always have 2 public and 2 private subnets in differrent availability zones
+		With ELB's make sure they are in 2 public subnets in 2 different availability zones
+		With bastion hosts, put them behind an autoscaling group with a minumum size of 2
+		NAT instances - 1 in each public subnet, each with a public IP, and a script to handle failover
+	VPC flow logs
+		You can monitor network traffic within VPC using flow logs
+		
