@@ -1,0 +1,18 @@
+Notes for building a fault tolerant site using many AWS resources
+
+1) create VPC with 10.0.0.0/16
+2) create IGW and attach to vpc
+3) create two public and private facing subnets
+4) Create public route table with routes from 0.0.0.0/0 to IGW and associate with two public subnets
+5) create IAM role for s3, give s3 full access
+6) create VPC security group , 1 for dmz, 1 for RDS
+7) for dmz SG -> Allow http on 80 and ssh on 22 for 0.0.0.0/0
+8) for RDS SG -> Allow Postgresql rule from web-dmz-sg
+9) create s3 bucket to hold media files
+10) Create a web cloud front distribution , origin to s3 bucket , restrict Bucket access YES, create new origin access Identity, allow read bucket permissions on upload
+11) Create RDS instance , password: testingVPCRDS , in VPC with security group RDS-SG
+
+12) Create classic, public facing Load balancer with access to public subnets
+13) optional ** in Route 53, set up A record alias to load balancer
+14) Create aws ec2 instance in public subnet with security role s3, and use bash script from folder
+15) attach load balancer to ec2 instance

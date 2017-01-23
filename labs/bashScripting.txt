@@ -5,7 +5,7 @@ How to add bash script to aws ec2 instance
 #!/bin/bash
 yum install httpd -y
 yum update -y
-aws S3 cp s3://asdkasdns/index.html /var/www/html/ 
 service httpd start
 chkconfig httpd on
+echo "<html><h1>Hello Cloud Gurus!</h1></html>" > /var/www/html/index.html
 
