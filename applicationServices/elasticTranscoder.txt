@@ -1,0 +1,3 @@
+What is elastic transcoder?
+
+Media transcoder to convert media files to different formats. Provides presets for popular output formats. Pay based on the minutes you transcode and resolution

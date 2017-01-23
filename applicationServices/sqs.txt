@@ -1,0 +1,37 @@
+What is SQS:
+
+Amazon SQS is a web service that gives you access to a message queue that can be used to store messages while waitigin for a cumputer to process them. Amazon SQS is a distributes queue system that enabels web service applications to quickly and reliably queue messages that one component in the application generates to be consumed by another component.
+
+Using amazon SQS, you can decouple the components of an application so they run independently. Messages can store up to 256kb of text in any format. Any component can later retrieve the messages programmatically using the Amazon SQS API.
+
+The queue acts as a buffer between the component producing and saving data and the component receiving the data for processing. This means that the queue resolves issues that arise if the producer is producing work faster than the consumer can process it, or if the producer or consumer are only intermittently connected to the network.
+
+
+Amazon sqs ensures delivery of each message at least once, and supports multiple readers and writers interacting wit the same queue. a single queue can be used simultaneously by many distributes application components, with no need for those components to coordinate with each other to share the queue.
+
+One of the tradeoffs is that SQS does not guarantee first in, first out delivery of messages. To preserve order, place sequencing information in each message so that they can be re-ordered when the queue returns them.
+
+Work flow of example scenario (adding water mark to image upon upload)
+
+1) Asynchonously pulls the task messages from the queue
+2) Retrieves the named file
+3) Adds water mark
+4) Writes the image back to S3
+5) Writes a task complete message to another queue
+6) Deletes the original task message
+7) checks for more messages in the queue
+
+SQS can be configured for auto-scaling
+
+
+Exam tips:
+	Does not offer FIFO (first in first out)
+	12 hour visability time out
+	Provides "at least once" delivery of all messages in its queueus.
+	Design system so that processing a message more than once does not create any errors or inconsistencies
+	256kb message sizes
+	Billed at 64Kb "chunks" (a 256kb message = 4 x 64kb chunks)
+	1st 1 million sqs requests per month are free
+	0.50 per 1 million requests per month thereafter
+	a single request can have from 1 to 10 messages
+	Each 64Kb chunk is 1 request

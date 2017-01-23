@@ -1,0 +1,38 @@
+
+
+SQS
+	queue service
+	Does not offer FIFO (first in first out)
+	12 hours Visibaility time out
+	garuntees delivery
+	256kb message size
+	billed at 64kb chunks
+
+SWF vs SWS
+	SQS retention period of 14 days , SWF = 1 year
+	SWF prents a task oriented API, SQS offers a message-oriented API
+	SWF ensures that a task is assigned only once and is never duplicated
+	SWF keeps track of all the tasks and events in an application.
+
+SWF actors
+	Workflow starters - An application that can initiate a workflow
+	Deciders - control the flow of activity tasks in a workflow execution
+	Activity workers - carry out the task
+
+
+SNS Subscribers
+	HTTP
+	HTTPS
+	Email
+	Email-JSON
+	SQS
+	Application
+	lambda
+
+SNS vs SQS
+	both messaging
+	SNS - push
+	SQS - polls
+
+Elastic Transcoder
+	Media transcoder
