@@ -10,9 +10,28 @@ Notes for building a fault tolerant site using many AWS resources
 8) for RDS SG -> Allow Postgresql rule from web-dmz-sg
 9) create s3 bucket to hold media files
 10) Create a web cloud front distribution , origin to s3 bucket , restrict Bucket access YES, create new origin access Identity, allow read bucket permissions on upload
-11) Create RDS instance , password: testingVPCRDS , in VPC with security group RDS-SG
+11) Create RDS instance , password: testingVPCRDS3 , host testingvpcrds3.cyt0amio041o.us-east-2.rds.amazonaws.com:3306, in VPC with security group RDS-SG
 
 12) Create classic, public facing Load balancer with access to public subnets
 13) optional ** in Route 53, set up A record alias to load balancer
 14) Create aws ec2 instance in public subnet with security role s3, and use bash script from folder
 15) attach load balancer to ec2 instance
+
+
+PART 2, Automation & setting up AMI
+
+Lots of unnessesary cron jobs and other junk that I wouldn't use in production
+
+PART 3 , Autoscaling and load testing
+
+1) create launch configuration from AMI
+2) select roles
+3) Create auto scaling group
+4) select all subnets 
+5) select scaling policies
+6) Add alarms
+7) Add notifications for thressholds
+
+
+
+
